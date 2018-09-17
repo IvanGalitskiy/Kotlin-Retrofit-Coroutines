@@ -10,7 +10,7 @@ class FakeService : Repository {
 
 
     val api: FakeApi
-    fun init(): FakeApi {
+    private fun init(): FakeApi {
         val retrofit = Retrofit.Builder()
                 .addCallAdapterFactory(CoroutineCallAdapterFactory())
                 .addConverterFactory(GsonConverterFactory.create())
